@@ -25,6 +25,14 @@ Make sure to chmod +x your files, usage is trivial:
 ./write-eeprom256.py mlems_eeprom.jpg
 ./read-eeprom256.py mlems_output.jpg
 ```
+Added writing and reading from any possible offset (0-32767):
+```
+sha1sum yukarin.txt
+833950085682b25e7ef41dc28240c0f0c8eeef4f yukarin.txt
+./write-byte256.py 0 < yukarin.txt
+./read-offsets256.py 0 8 | sha1sum
+833950085682b25e7ef41dc28240c0f0c8eeef4f -
+```
 
 ## Benefits
 
