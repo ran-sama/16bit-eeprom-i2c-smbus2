@@ -28,10 +28,10 @@ Make sure to chmod +x your files, usage is trivial:
 Added writing and reading from any possible offset (0-32767):
 ```
 sha1sum yukarin.txt
-833950085682b25e7ef41dc28240c0f0c8eeef4f yukarin.txt
+2d38e855276997a6fce97115cf4b856aca0227ce yukarin.txt
 ./write-byte256.py 0 < yukarin.txt
-./read-offsets256.py 0 8 | sha1sum
-833950085682b25e7ef41dc28240c0f0c8eeef4f -
+./read-offsets256.py 0 7 | sha1sum
+2d38e855276997a6fce97115cf4b856aca0227ce -
 ```
 
 ## Benefits
