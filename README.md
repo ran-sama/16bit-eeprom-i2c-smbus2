@@ -33,7 +33,7 @@ Added writing and reading from any possible offset (0-32767):
 sha1sum yukarin.txt
 2d38e855276997a6fce97115cf4b856aca0227ce yukarin.txt
 ```
-You can use it as a cryptography key storage (it's good to clone to a second EEPROM as backup):
+You can use it as storage for cryptographic keys (clone a backup to a second EEPROM):
 
 ```shell
 COUNTER=0
