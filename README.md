@@ -33,6 +33,25 @@ Added writing and reading from any possible offset (0-32767):
 sha1sum yukarin.txt
 2d38e855276997a6fce97115cf4b856aca0227ce yukarin.txt
 ```
+You can use it as a cryptography key storage (it's good to clone to a second EEPROM as backup):
+
+```
+COUNTER=0
+for run in {1..215}
+do
+  echo Writing to offset $COUNTER
+  openssl genpkey -algorithm X448 | python write-offsets256.py $COUNTER
+  let COUNTER+=152
+done
+let COUNTER=32680
+for run in {1..11}
+do
+  echo Writing to offset $COUNTER
+  printf "ransama9" | python write-offsets256.py $COUNTER
+  let COUNTER+=8
+done
+```
+
 
 ## Benefits
 
