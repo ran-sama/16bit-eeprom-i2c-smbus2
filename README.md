@@ -56,9 +56,7 @@ done
 ## Benefits
 
 Due to usage of smbus2 this is not only faster but also very reliable compared to the outdated smbus.
-
 The first two (read/write) code samples are accelerated due to 32 byte blocks being read and written.
-
 The latter two (with the offsets) perform much poorer. This is due to slow byte-by-byte operations.
 
 ## License
