@@ -19,14 +19,14 @@ If pip gives you troubles you can put sudo -H in front of it, if you know what y
 
 Make sure to chmod +x your files, usage is trivial:
 
-```
+```bash
 ./write-eeprom256.py empty32768
 ./read-eeprom256.py empty_output.txt
 ./write-eeprom256.py mlems_eeprom.jpg
 ./read-eeprom256.py mlems_output.jpg
 ```
 Added writing and reading from any possible offset (0-32767):
-```
+```bash
 ./write-offsets256.py 0 < yukarin.txt
 ./read-offsets256.py 0 7 | sha1sum
 2d38e855276997a6fce97115cf4b856aca0227ce -
@@ -35,7 +35,7 @@ sha1sum yukarin.txt
 ```
 You can use it as a cryptography key storage (it's good to clone to a second EEPROM as backup):
 
-```
+```bash
 COUNTER=0
 for run in {1..215}
 do
