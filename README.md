@@ -35,7 +35,7 @@ sha1sum yukarin.txt
 ```
 You can use it as a cryptography key storage (it's good to clone to a second EEPROM as backup):
 
-```bash
+```shell
 COUNTER=0
 for run in {1..215}
 do
