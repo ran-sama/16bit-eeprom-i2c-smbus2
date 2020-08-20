@@ -54,24 +54,22 @@ done
 
 ## Benchmarks
 
+```
 Full chip write, 32 byte chunks:
 10.6536 seconds
-
 Lifetime endurance at constant writing:
 (1000000 * 10.6536) seconds = 4.05 months
-
 Writing speed in 32 byte mode,
 (10.6536 / 32768) seconds/bytes = 0.3251 ms/byte
-
-
+```
+```
 Full chip write, 1 byte at a time:
 193.202 seconds
-
 Lifetime endurance at constant writing:
 (1000000 * 193.202) seconds =  73.47 months
-
 Writing speed in single-byte mode,
 (193.202 / 32768) seconds/bytes = 5.8961 ms/byte
+```
 
 Giving an overhead of 896.1 microseconds per code execution and sending data on the bus.
 
