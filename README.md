@@ -57,7 +57,7 @@ Using time ./bench.sh whilst the benchmark scripts runs 10 full writes of 32768 
 
 This means if you write 1 million times non-stop you need (1 000 000 * 10.661) * seconds = 4.054 months until reaching the endurance limit of the EEPROM chip. Much longer than any SSD would last, as NAND flash is rated at 10,000 cycles only. In a setting where you want to only store data long term (Data Retention: 40 Years) this is more than sufficient. For longer storage and more cycles use FRAM modules (ferroelectric RAM). Which actually is non-volatile despite its name.
 
-At a speed of (10.66100 / 32 768) * seconds = 0.3253479 milliseconds / per byte, the device runs 15.37 times more faster than in single-byte operation, the latter requiring a write delay of 5ms per write. Apparently internally the write cache can likely access several registers at once per latch release, if you shift it a chunk or 32 bytes at once.
+At a speed of (10.66100 / 32 768) * seconds = 0.3253479 milliseconds / per byte, the device runs 15.37 times more faster than in single-byte operation, the latter requiring a write delay of 5ms/1byte per write. Apparently internally the write cache can likely access several registers at once per latch release, if you shift it a chunk or 32 bytes at once.
 
 
 ## Benefits
