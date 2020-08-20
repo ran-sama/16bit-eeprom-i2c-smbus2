@@ -73,7 +73,7 @@ Writing speed, single-byte mode:
 
 Substracting the mandatory 5ms wait between operations, an overhead of 896.1 microseconds results for code execution and bus.
 
-This is much longer than any SSD would last, as NAND flash is rated at 10,000 duty cycles only. In a setting where you want to only store data long term (data retention: 40 Years) this is more than sufficient. For longer storage (151 years) and more cycles (10^14) use FRAM modules (ferroelectric RAM). Which actually is non-volatile despite its name and has unnoticeable (~90ns) write delays.
+The endurance is much longer than any SSD can offer, as NAND flash is rated at mere 10,000 duty cycles. In a setting where you want to only store data long term (EEPROM data retention: 40 years) this is more than sufficient. FRAM modules can provide longer retention (151 years), more cycles (10^14) and unnoticeable (~90ns) write delays. Despite its name ferroelectric RAM is actually non-volatile.
 
 
 ## Benefits
