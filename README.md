@@ -51,13 +51,31 @@ do
   let COUNTER+=8
 done
 ```
+
 ## Benchmarks
 
-Using time ./bench.sh whilst the benchmark scripts runs 10 full writes of 32768 bytes in 32 byte chunks, an average time of 10.661 seconds per 32 KiB was detected.
+Full chip write, 32 byte chunks:
+10.6536 seconds
 
-This means if you write 1 million times non-stop you need (1 000 000 * 10.661) * seconds = 4.054 months until reaching the endurance limit of the EEPROM chip. Much longer than any SSD would last, as NAND flash is rated at 10,000 cycles only. In a setting where you want to only store data long term (Data Retention: 40 Years) this is more than sufficient. For longer storage and more cycles use FRAM modules (ferroelectric RAM). Which actually is non-volatile despite its name.
+Lifetime endurance at constant writing:
+(1000000 * 10.6536) seconds = 4.05 months
 
-At a speed of (10.66100 / 32 768) * seconds = 0.3253479 milliseconds / per byte, the device runs 15.37 times more faster than in single-byte operation, the latter requiring a write delay of 5ms/1byte per write. Apparently internally the write cache can likely access several registers at once per latch release, if you shift it a chunk or 32 bytes at once.
+Writing speed in 32 byte mode,
+(10.6536 / 32768) seconds/bytes = 0.3251 ms/byte
+
+
+Full chip write, 1 byte at a time:
+193.202 seconds
+
+Lifetime endurance at constant writing:
+(1000000 * 193.202) seconds =  73.47 months
+
+Writing speed in single-byte mode,
+(193.202 / 32768) seconds/bytes = 5.8961 ms/byte
+
+Giving an overhead of 896.1 microseconds per code execution and sending data on the bus.
+
+This is much longer than any SSD would last, as NAND flash is rated at 10,000 duty cycles only. In a setting where you want to only store data long term (data retention: 40 Years) this is more than sufficient. For longer storage (151 years) and more cycles (10^14) use FRAM modules (ferroelectric RAM). Which actually is non-volatile despite its name and has unnoticeable (~90ns) write delays.
 
 
 ## Benefits
