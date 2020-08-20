@@ -53,7 +53,7 @@ done
 ```
 ## Benchmarks
 
-Using time ./bench.sh whilst the benchmark scripts is 10 full writes of 32768 bytes in 32 byte chunks, an average time of 10.661 seconds per 32 KiB was detected.
+Using time ./bench.sh whilst the benchmark scripts runs 10 full writes of 32768 bytes in 32 byte chunks, an average time of 10.661 seconds per 32 KiB was detected.
 This means if you write 1 million times non-stop you need (1 000 000 * 10.661) * seconds = 4.054 months until reaching the endurance limit of the EEPROM chip. Much longer than any SSD would last, as NAND flash is rated at 10,000 cycles only. In a setting where you want to only store data long term (Data Retention: 40 Years) this is more than sufficient. For longer storage and more cycles use FRAM modules (ferroelectric RAM). Which actually is non-volatile despite its name.
 
 
