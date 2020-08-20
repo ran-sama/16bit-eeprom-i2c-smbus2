@@ -20,7 +20,7 @@ If pip gives you troubles you can put sudo -H in front of it, if you know what y
 Make sure to chmod +x your files, usage is trivial:
 
 ```
-./write-eeprom256.py empty32768
+./write-eeprom256.py onefill32
 ./read-eeprom256.py empty_output.txt
 ./write-eeprom256.py mlems_eeprom.jpg
 ./read-eeprom256.py mlems_output.jpg
