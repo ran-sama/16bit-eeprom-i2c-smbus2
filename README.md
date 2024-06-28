@@ -1,5 +1,5 @@
 # 16bit-eeprom-i2c-smbus2
-Write to and read from a 16bit EEPROM or FRAM with Python smbus2 over the i2c serial communication bus.
+Write to and read from a 16bit EEPROM or FRAM with Python 3 smbus2 over the i2c serial communication bus.
 
 Tested on AT24C256 with 256 Kibibit (aka 32 KiB or 32768 Byte):
 
